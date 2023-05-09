@@ -40,6 +40,7 @@ int main(){
             }
             break;
         case 3:
+            //ADICIONAR UMA FUNÇÃO PARA VERIFICAR SE A ÁRVORE ESTÁ VAZIA
             if(root == NULL){
                 printf("\nARVORE VAZIA");
             }else{
