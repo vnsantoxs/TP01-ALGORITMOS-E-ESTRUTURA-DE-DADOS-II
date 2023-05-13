@@ -1,0 +1,16 @@
+Introdução: Transcrever um panorama geral do trabalho, 
+o que é uma estrutura de árvores, notas históricas, 
+exemplos de algoritmos clássicos em árvores, algumas aplicações de árvores para resolução de problemas, etc.
+As árvores são compostas por nós interconectados, onde cada nó contém um valor e pode ter zero ou mais nós filhos. 
+A partir da raiz, que é o nó no topo da árvore, é possível percorrer a estrutura de forma hierárquica, acessando os nós internos e folhas.
+ A estrutura hierárquica das árvores torna possível realizar operações de busca, inserção e remoção de maneira eficiente, 
+ especialmente em comparação com outras estruturas de dados lineares.
+O estudo e desenvolvimento das estruturas de árvores remontam ao início da ciência da computação. 
+Um exemplo clássico é a árvore binária de busca, que foi introduzida nos anos 1960. 
+Essa estrutura permite uma busca eficiente, pois segue uma ordem específica de valores.
+Algoritmos como a busca em árvore binária, que percorre a árvore de forma ordenada, 
+são amplamente utilizados em diversas aplicações.
+As árvores têm uma ampla gama de aplicações em resolução de problemas. Por exemplo, 
+o algoritmo de ordenação por árvore (Tree Sort) utiliza uma árvore para ordenar elementos, inserindo-os na árvore e, em seguida, percorrendo-os em ordem. As árvores também são utilizadas em estruturas de dados avançadas, como árvores de prefixo (Trie), que são usadas para armazenar e pesquisar palavras em dicionários, ou nas árvores B e árvores B +, comumente empregadas em bancos de dados para acesso rápido.
+Dentro desse contexto, este trabalho se concentra em uma classe específica de árvores chamada árvores AVL. 
+As árvores AVL são árvores binárias de busca auto equilibradas, onde a altura das subárvores esquerda e direita é mantida balanceada. Isso garante um tempo de busca e operações de inserção e remoção eficientes. Os artigos referenciados neste trabalho fornecem uma visão aprofundada das árvores AVL, incluindo suas propriedades, operações, benefícios e exemplos de implementação.
