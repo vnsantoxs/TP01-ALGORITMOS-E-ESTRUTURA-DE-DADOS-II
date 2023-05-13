@@ -1,0 +1,23 @@
+CreateNode possui complexidade O(1) melhor, pior, medio
+GetBiggest O(MAIOR(altura direita, altura esquerda)) melhor, pior, medio
+GetHeight O(altura do NÓ) melhor, pior, medio
+GetBalance O(MAIOR(altura direita, altura esquerda)) melhor, pior, medio
+RotateLeft O(altura do NÓ) melhor, pior, medio
+RotateRigth O(altura do NÓ) melhor, pior, medio
+RotateRigthLeft O(altura do NÓ Direito + altura NÓ Esquedo) melhor, pior, medio
+RotateLeftRigth O(altura do NÓ Esquedo + altura NÓ Direito) melhor, pior, medio
+BalanceTree depende da complexidade das funçoes RotateLeft,RotateRigth,RotateRigthLeft e RotateLeftRigth
+InsertNode melhor O(1), pior e medio O(log N)
+RemoveNode melhor O(1), pior e medio O(log N)
+ShowGraf O(N) melhor, pior, medio
+ShowPRE O(N) melhor, pior, medio
+ShowINO O(N) melhor, pior, medio
+ShowPOS O(N) melhor, pior, medio
+SearchNode  melhor O(1), pior e medio O(log N)  
+RemoveDuplicates O(n log n) melhor, pior, medio
+FindMinimum O(log N)
+FindMaximum O(log N)
+FindSuccessor O(log N)
+FindPredecessor O(log N)
+GetBalanceMenu O(log N)
+IsEmpty  O(1) melhor, pior, medio
