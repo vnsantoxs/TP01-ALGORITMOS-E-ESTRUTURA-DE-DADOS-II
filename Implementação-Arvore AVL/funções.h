@@ -18,20 +18,8 @@ AVLNode* CreateNode(int key) {
         node->parent = NULL;
         node->height = 0;
         return node;
-    }else{
-        printf("\nNODE CREATION ERROR!");
     }
-}
-
-//FUNUÇÃO PARA RETORNAR A ALTURA DO MAIOR NÓ (DIREITO OU ESQUERDO) 
-int GetBiggest(AVLNode *node) {
-    if (node == NULL) {
-        return 0;
-    }
-    int leftHeight = GetHeight(node->left);
-    int rightHeight = GetHeight(node->right);
-
-    return (leftHeight>rightHeight)? leftHeight: rightHeight;
+    printf("\nNODE CREATION ERROR!");
 }
 
 //FUNÇÃO PARA RETONAR A ALTURA DE UM NÓ
@@ -40,6 +28,17 @@ int GetHeight(AVLNode *node) {
         return -1;
     }
     return node->height;
+}
+
+//FUNÇÃO PARA RETORNAR A ALTURA DO MAIOR NÓ (DIREITO OU ESQUERDO) 
+int GetBiggest(AVLNode *node) {
+    if (node == NULL) {
+        return 0;
+    }
+    int leftHeight = GetHeight(node->left);
+    int rightHeight = GetHeight(node->right);
+
+    return (leftHeight>rightHeight)? leftHeight: rightHeight;
 }
 
 //FUNÇÃO DE VERIFICAÇÃO DE BALANCEAMENTO DO NÓ
@@ -66,7 +65,7 @@ AVLNode* RotateLeft(AVLNode *node) {
 }
 
 //FUNÇÃO DE ROTAÇÃO A DIREITA
-AVLNode* RotateRigth(AVLNode *node){
+AVLNode* RotateRight(AVLNode *node){
     AVLNode *Node1, *Node2;
     
     Node1 = node->left;
@@ -82,15 +81,15 @@ AVLNode* RotateRigth(AVLNode *node){
 }
 
 //FUNÇÃO DE ROTAÇÃO DUPLA DIREITA-ESQUERDA
-AVLNode* RotateRigthLeft(AVLNode *node){
-    node->right = RotateRigth(node->right);
+AVLNode* RotateRightLeft(AVLNode *node){
+    node->right = RotateRight(node->right);
     return RotateLeft(node);
 }
 
 //FUNÇÃO DE ROTAÇÃO DUPLA ESQUERDA-DIREITA
 AVLNode* RotateLeftRigth(AVLNode *node){
     node->left = RotateLeft(node->left);
-    return RotateRigth(node);
+    return RotateRight(node);
 }
 
 //FUNÇÃO DE BALANCEAMENTO DA ARVORE AVL
@@ -101,13 +100,13 @@ AVLNode* BalanceTree (AVLNode *root){
         root = RotateLeft(root);
 
     }else if(NodeB > 1 && GetBalance(root->left) >= 0){
-        root = RotateRigth(root);
+        root = RotateRight(root);
 
     }else if(NodeB > 1 && GetBalance(root->left) < 0){
         root = RotateLeftRigth(root);
 
     }else if(NodeB < -1 && GetBalance(root->right) > 0){
-        root = RotateRigthLeft(root);
+        root = RotateRightLeft(root);
 
     }
 
